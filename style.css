@@ -1,0 +1,184 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Essential for full height centering */
+}
+
+body {
+    background-color: #1c1c1e; /* Apple Dark Grey */
+    color: #a1a1a1;
+    font-family: "Prompt", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Safe area for mobile edges */
+}
+
+/* LAYOUT ENGINE */
+.center-stage {
+    flex: 1; /* Takes up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical Center */
+    align-items: center;     /* Horizontal Center */
+    width: 100%;
+    max-width: 700px;        /* Constraint for readability */
+    padding-top: 40px;       /* Breathing room from top */
+    padding-bottom: 40px;    /* Breathing room from footer */
+}
+
+/* LOGO HANDLING */
+.logo-wrapper {
+    margin-bottom: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 140px; /* Desktop Size */
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9; /* Slight blend with dark mode */
+}
+
+/* TYPOGRAPHY */
+h2 {
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: #f5f5f7;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #d1d1d6;
+}
+
+/* CLIENT NOTICE & STATUS */
+.client-notice {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #3a3a3c;
+    width: 40px;
+    margin: 0 auto 2rem auto;
+}
+
+.status-box {
+    background-color: #252527; /* Very subtle elevation */
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+}
+
+.status-box p {
+    font-size: 0.95rem;
+    color: #e5e5ea;
+    margin-bottom: 0.2rem;
+}
+
+.sub-status {
+    font-size: 0.85rem !important;
+    opacity: 0.7;
+}
+
+strong {
+    font-weight: 500;
+    color: #fff;
+}
+
+/* CONTACT LINKS */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.label {
+    font-size: 0.7rem;
+    color: #636366; /* Apple system grey */
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+.link:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* FOOTER */
+.footer {
+    padding-bottom: 30px; /* Safe distance from bottom edge */
+    width: 100%;
+    flex-shrink: 0; /* Prevents footer from squashing */
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: #48484a; /* Darker grey for subtlety */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    h2 { font-size: 2.2rem; }
+    .logo-img { width: 110px; } /* Mobile logo scaling */
+    
+    .contact-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    /* Ensure content doesn't hit the edges on small phones */
+    .center-stage {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+h3 {
+    font-size: 0.75rem; /* Small and precise */
+    text-transform: uppercase;
+    letter-spacing: 0.15em; /* Wide spacing for that premium look */
+    margin-bottom: 1rem;
+    color: #636366; /* Subtle grey */
+    font-weight: 500;
+}
+
+.tagline {
+    font-size: 0.85rem;      /* Slightly bigger for readability */
+    color: #ffffff;          /* Pure White */
+    text-transform: uppercase;
+    letter-spacing: 0.25em;  /* W I D E spacing looks premium */
+    font-weight: 500;        /* Bolder so it stands out */
+    opacity: 1;              /* 100% Visibility - No fading */
+}
